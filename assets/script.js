@@ -39,11 +39,11 @@ function writePassword() {
             console.log(masterArray)
         }
         // cancels the function if not character types were approved
-        if (masterArray = [...Array(0)]){
+        if (masterArray.length <= 0){
             window.alert('Please chose at least one type of character for your password.');
             return;
         }
-        // resets the password to blank, then generates a new password
+        // resets the password to blank, then generates a new password 
         var newPassword = ''
         for (i = 0; i < passwordLength; i++){
             var randomNumber = Math.floor(Math.random() * masterArray.length);
