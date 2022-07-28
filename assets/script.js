@@ -37,6 +37,13 @@ function writePassword() {
             masterArray = masterArray.concat(specialCharactersArray);
             console.log(masterArray)
         }
+        var newPassword = ''
+        for (i = 0; i < passwordLength; i++){
+            var randomNumber = Math.floor(Math.random() * masterArray.length);
+            newPassword = newPassword + masterArray[randomNumber];
+            console.log(newPassword)
+        }
+        return newPassword;
     }
     var password = generatePassword()
 
