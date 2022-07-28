@@ -10,6 +10,7 @@ var specialCharactersArray = ['-', '+', '*', '/', '=', ']', '[', '}', '{', '<', 
 function writePassword() {
     masterArray = []
     var generatePassword = function() {
+        // determines password length and what type of characters will be in the password
         var passwordLength = window.prompt('how long will your password be? must be between 8-128 characters')
         if (passwordLength >= 8 && passwordLength <= 128) {
             console.log(passwordLength)
@@ -37,6 +38,12 @@ function writePassword() {
             masterArray = masterArray.concat(specialCharactersArray);
             console.log(masterArray)
         }
+        // cancels the function if not character types were approved
+        if (masterArray = [...Array(0)]){
+            window.alert('Please chose at least one type of character for your password.');
+            return;
+        }
+        // resets the password to blank, then generates a new password
         var newPassword = ''
         for (i = 0; i < passwordLength; i++){
             var randomNumber = Math.floor(Math.random() * masterArray.length);
