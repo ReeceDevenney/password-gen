@@ -11,25 +11,25 @@ function writePassword() {
     masterArray = []
     var generatePassword = function () {
         // determines password length and what type of characters will be in the password
-        var passwordLength = window.prompt('how long will your password be? must be between 8-128 characters')
+        var passwordLength = window.prompt('How long will your password be? must be between 8-128 characters')
         if (passwordLength >= 8 && passwordLength <= 128) {
         } else {
-            window.alert('please enter a value between 8-128 characters');
+            window.alert('Please enter a value between 8-128 characters');
             return;
         }
-        var lowerCase = window.confirm('add lower case characters to password?');
+        var lowerCase = window.confirm('Add lower case characters to password?');
         if (lowerCase) {
             masterArray = masterArray.concat(lowerCaseArray);
         }
-        var upperCase = window.confirm('add uper case characters to password?');
+        var upperCase = window.confirm('Add uper case characters to password?');
         if (upperCase) {
             masterArray = masterArray.concat(upperCaseArray);
         }
-        var number = window.confirm('add number characters to password?');
+        var number = window.confirm('Add number characters to password?');
         if (number) {
             masterArray = masterArray.concat(numberArray);
         }
-        var specialCharacters = window.confirm('add special Characters to password?');
+        var specialCharacters = window.confirm('Add special characters to password?');
         if (specialCharacters) {
             masterArray = masterArray.concat(specialCharactersArray);
         }
